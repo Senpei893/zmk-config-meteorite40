@@ -221,7 +221,7 @@
         mm_qt: mm_qt {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_QT";
-            bindings = <&kp LS(NUMBER_7)>, <&kp LS(NUMBER_2)>;
+            bindings = <&kp LS(NUMBER_7)>, <&kp LS(LEFT_BRACKET)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -241,7 +241,7 @@
             label = "TD_QT";
             #binding-cells = <0>;
             tapping-term-ms = <180>;
-            bindings = <&mm_qt>, <&kp LS(LEFT_BRACKET)>;
+            bindings = <&mm_qt>, <&kp LS(NUMBER_7)>;
         };
 
         td_mb3mac: td_mb3mac {
@@ -362,7 +362,7 @@
             display-name = "Symbols / Numbers";
             bindings = <
 &none   &td_qt  &td_lb  &td_rb  &kp SEMI          &kp KP_ASTERISK  &mm_kp7  &kp N8        &kp N9   &mm_kpsls
-&trans  &trans  &trans  &trans  &kp SINGLE_QUOTE  &kp KP_PLUS      &kp N4   &kp N5        &mm_kp6  &mm_kpmns
+&trans  &trans  &trans  &trans  &kp SINGLE_QUOTE  &kp KP_PLUS      &kp N4   &kp N5        &mm_kp6  &td_kpmns
 &none   &none   &none   &none   &kp BACKSLASH     &trans           &trans   &kp KP_EQUAL  &kp N1   &mm_kp2    &kp N3  &kp ENTER
 &trans  &trans  &trans  &trans  &mm_kpcmm         &kp NUMBER_0     &kp TAB  &mm_kpprd
             >;
