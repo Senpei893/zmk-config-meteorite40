@@ -19,7 +19,7 @@
 
 &lt {
     flavor = "tap-preferred";
-    tapping-term-ms = <150>; // change 200 to 150 // change 200 to 150
+    tapping-term-ms = <180>; // change 200 to 150 // change 200 to 150
 };
 
 / {
@@ -330,7 +330,7 @@
         compatible = "zmk,keymap";
         layout = &LOW_PROFILE_TYPE_B;
 
-        layer_0 {
+        win_default_layer {
             display-name = "MacOS";
             bindings = <
 &kp Q                    &kp W           &kp E             &kp R               &kp T         &kp Y                  &kp U               &kp I           &kp O               &kp P
@@ -362,7 +362,7 @@
             display-name = "Symbols / Numbers";
             bindings = <
 &none   &td_qt  &td_lb  &td_rb  &kp SEMI          &kp KP_ASTERISK  &mm_kp7  &kp N8        &kp N9   &mm_kpsls
-&none   &trans  &trans  &trans  &kp SINGLE_QUOTE  &kp KP_PLUS      &kp N4   &kp N5        &mm_kp6  &mm_kpmns
+&trans  &trans  &trans  &trans  &kp SINGLE_QUOTE  &kp KP_PLUS      &kp N4   &kp N5        &mm_kp6  &mm_kpmns
 &none   &none   &none   &none   &kp BACKSLASH     &trans           &trans   &kp KP_EQUAL  &kp N1   &mm_kp2    &kp N3  &kp ENTER
 &trans  &trans  &trans  &trans  &mm_kpcmm         &kp NUMBER_0     &kp TAB  &mm_kpprd
             >;
@@ -411,9 +411,9 @@
         layer_6 {
             display-name = "SETTING";
             bindings = <
-&ccfg C_CPI_DN   &ccfg C_CPI_UP   &ccfg C_ROT_DN    &ccfg C_ROT_UP    &ccfg C_SCALE_TOG       &none   &none   &none        &none  &none
-&ccfg C_SDIV_DN  &ccfg C_SDIV_UP  &ccfg C_SCRH_TOG  &ccfg C_SCRV_TOG  &ccfg C_SCRL_SCALE_TOG  &none   &none   &none        &none  &none
-&ccfg C_SAVE     &ccfg C_RESET    &none             &none             &ccfg C_SCRL2_UP        &to 0   &to 1   &bootloader  &none  &none  &none  &none
+&ccfg C_CPI_DN   &ccfg C_CPI_UP   &ccfg C_ROT_DN    &ccfg C_ROT_UP    &ccfg C_SCALE_TOG       &trans  &trans  &trans       &trans  &trans
+&ccfg C_SDIV_DN  &ccfg C_SDIV_UP  &ccfg C_SCRH_TOG  &ccfg C_SCRV_TOG  &ccfg C_SCRL_SCALE_TOG  &trans  &trans  &trans       &trans  &trans
+&ccfg C_SAVE     &ccfg C_RESET    &none             &none             &ccfg C_SCRL2_UP        &to 0   &to 1   &bootloader  &trans  &trans  &trans  &trans
 &trans           &trans           &trans            &trans            &trans                  &trans  &trans  &trans
             >;
 
