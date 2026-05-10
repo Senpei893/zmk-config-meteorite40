@@ -136,6 +136,122 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        td_lb: td_lb {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_LB";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACKET>, <&kp LS(NUMBER_8)>;
+
+            tapping-term-ms = <180>;
+        };
+
+        td_rb: td_rb {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_RB";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSLASH>, <&kp LS(NUMBER_9)>;
+
+            tapping-term-ms = <180>;
+        };
+
+        mm_kpsls: mm_kpsls {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_KPSLS";
+            bindings = <&kp KP_SLASH>, <&kp LS(SLASH)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mm_kpmns: mm_kpmns {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_KPMNS";
+            bindings = <&kp KP_MINUS>, <&kp LS(INTERNATIONAL_1)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mm_kp7: mm_kp7 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_KP7";
+            bindings = <&kp NUMBER_7>, <&kp LS(NUMBER_6)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mm_kp6: mm_kp6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_KP6";
+            bindings = <&kp NUMBER_6>, <&kp LS(EQUAL)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mm_kp2: mm_kp2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_KP2";
+            bindings = <&kp NUMBER_2>, <&kp LS(LEFT_BRACKET)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mm_kpcmm: mm_kpcmm {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_KPCMM";
+            bindings = <&kp KP_COMMA>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mm_kpprd: mm_kpprd {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_KPPRD";
+            bindings = <&kp KP_DOT>, <&kp GREATER_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mm_qt: mm_qt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_QT";
+            bindings = <&kp LS(NUMBER_7)>, <&kp LS(NUMBER_2)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        td_kpmns: td_kpmns {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_KPMNS";
+            #binding-cells = <0>;
+            bindings = <&mm_kpmns>, <&kp LS(EQUAL)>;
+
+            tapping-term-ms = <180>;
+        };
+
+        td_qt: td_qt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_QT";
+            #binding-cells = <0>;
+            tapping-term-ms = <180>;
+            bindings = <&mm_qt>, <&kp LS(LEFT_BRACKET)>;
+        };
+
+        td_mb3mac: td_mb3mac {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_MB3MAC";
+            #binding-cells = <0>;
+            bindings = <&mb_kh LC(LG(D)) MB3>, <&kp F13>;
+
+            tapping-term-ms = <180>;
+        };
     };
 
     combos {
@@ -143,50 +259,70 @@
 
         lang1 {
             bindings = <&kp LANG1>;
-            key-positions = <12 13>; /* D + F */
+            key-positions = <1 2>; /* D + F */
             layers = <0>;
         };
 
         lang2 {
             bindings = <&kp LANG2>;
-            key-positions = <16 17>; /* J + K */
+            key-positions = <2 3>; /* J + K */
             layers = <0>;
         };
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <20 21>; /* Z + X */
-            layers = <0>;
+            key-positions = <0 1>; /* Z + X */
+            layers = <0 1>;
         };
 
         tab {
-            bindings = <&kp TAB>;
-            key-positions = <0 1>; /* Q + W */
-            layers = <0>;
+            bindings = <&kp GRAVE>;
+            key-positions = <1 2>; /* Q + W */
+            layers = <1>;
         };
 
         line_home {
             bindings = <&mosk HOME LG(LEFT)>;
-            key-positions = <16 17>; /* J + K (on layer 2) */
-            layers = <6>;
+            key-positions = <6 7>; /* J + K (on layer 2) */
+            layers = <0>;
         };
 
         line_end {
             bindings = <&mosk END LG(RIGHT)>;
-            key-positions = <18 19>; /* L + - (on layer 2) */
-            layers = <6>;
+            key-positions = <8 9>; /* L + - (on layer 2) */
+            layers = <0>;
         };
 
         doc_home {
             bindings = <&mosk LC(HOME) LG(UP)>;
-            key-positions = <16 18>; /* J + L (on layer 2) */
-            layers = <6>;
+            key-positions = <6 9>; /* J + L (on layer 2) */
+            layers = <0>;
         };
 
         doc_end {
             bindings = <&mosk LC(END) LG(DOWN)>;
             key-positions = <17 19>; /* K + - (on layer 2) */
-            layers = <6>;
+            layers = <0>;
+        };
+
+        Win_LS {
+            bindings = <&kp HOME>;
+            key-positions = <6 7>;
+        };
+
+        Win_LE {
+            bindings = <&kp END>;
+            key-positions = <8 9>;
+        };
+
+        Win_DH {
+            bindings = <&kp LC(HOME)>;
+            key-positions = <6 9>;
+        };
+
+        Win_DE {
+            bindings = <&kp LC(END)>;
+            key-positions = <7 8>;
         };
     };
 
@@ -225,10 +361,10 @@
         layer_2 {
             display-name = "Symbols / Numbers";
             bindings = <
-&none   &kp AT    &kp HASH  &kp DLLR  &kp SEMI          &kp KP_ASTERISK  &kp N7   &kp N8        &kp N9  &kp RBKT
-&trans  &kp AMPS  &kp STAR  &kp BSLH  &kp SINGLE_QUOTE  &kp KP_PLUS      &kp N4   &kp N5        &kp N6  &kp EQUAL
-&none   &none     &none     &none     &kp BACKSLASH     &trans           &trans   &kp KP_EQUAL  &kp N1  &kp N2     &kp N3  &kp PLUS
-&trans  &trans    &trans    &trans    &trans            &kp NUMBER_0     &kp TAB  &trans
+&none   &td_qt  &td_lb  &td_rb  &kp SEMI          &kp KP_ASTERISK  &mm_kp7  &kp N8        &kp N9   &mm_kpsls
+&none   &trans  &trans  &trans  &kp SINGLE_QUOTE  &kp KP_PLUS      &kp N4   &kp N5        &mm_kp6  &mm_kpmns
+&none   &none   &none   &none   &kp BACKSLASH     &trans           &trans   &kp KP_EQUAL  &kp N1   &mm_kp2    &kp N3  &kp ENTER
+&trans  &trans  &trans  &trans  &mm_kpcmm         &kp NUMBER_0     &kp TAB  &mm_kpprd
             >;
 
             sensor-bindings =
@@ -239,10 +375,10 @@
         layer_3 {
             display-name = "Functions / Arrowkeys";
             bindings = <
-&kp ASTRK  &kp N7  &kp N8  &kp N9  &kp PLUS   &none     &none     &none   &kp C_VOL_DN  &kp C_VOL_UP
-&kp SLASH  &kp N4  &kp N5  &kp N6  &kp MINUS  &none     &kp LEFT  &kp UP  &kp DOWN      &kp RIGHT
-&kp N0     &kp N1  &kp N2  &kp N3  &kp DOT    &mkp MB4  &mkp MB5  &none   &none         &none         &none  &none
-&trans     &trans  &trans  &trans  &trans     &trans    &trans    &trans
+&kp F1   &kp F2  &kp F3  &kp F4  &kp F5   &kp HOME         &kp PG_UP          &kp UP    &kp PG_DN          &none
+&kp F11  &trans  &trans  &trans  &kp F12  &kp END          &kp LEFT           &kp DOWN  &kp DOWN           &none
+&kp F6   &kp F7  &kp F8  &kp F9  &kp F10  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp F13   &kp K_APPLICATION  &kp LA(DOWN_ARROW)  &none  &none
+&trans   &trans  &trans  &trans  &trans   &trans           &trans             &trans
             >;
 
             sensor-bindings =
@@ -252,10 +388,10 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LS(LG(L))  &kp LG(W)  &trans     &kp LG(R)  &kp LG(T)      &td_mb3mac  &mt RA(H) LC(UP_ARROW)  &mt LEFT_SHIFT ESCAPE  &trans  &trans
+&trans         &trans     &trans     &trans     &kp LG(SEMI)   &trans      &trans                  &trans                 &trans  &trans
+&kp LG(Z)      &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(MINUS)  &trans      &trans                  &trans                 &trans  &trans  &trans  &trans
+&trans         &trans     &trans     &trans     &trans         &trans      &trans                  &trans
             >;
 
             label = "MacOSMB";
@@ -263,10 +399,10 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp LC(W)  &trans     &kp LC(R)  &kp LC(T)      &mkp MB3  &mt LG(D) LG(TAB)  &mt LEFT_SHIFT ESCAPE  &trans  &trans
+&trans     &trans     &trans     &trans     &kp LC(SEMI)   &trans    &trans             &trans                 &trans  &trans
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LG(V)  &kp LC(MINUS)  &trans    &trans             &trans                 &trans  &trans  &trans  &trans
+&trans     &trans     &trans     &trans     &trans         &trans    &trans             &trans
             >;
 
             label = "WindowsMB";
