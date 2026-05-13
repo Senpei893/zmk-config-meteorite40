@@ -275,7 +275,7 @@
             layers = <0 1>;
         };
 
-        graveandtilde {
+        gravtilde {
             bindings = <&kp GRAVE>;
             key-positions = <1 2>; /* Q + W */
             layers = <1>;
