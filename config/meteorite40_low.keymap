@@ -284,21 +284,25 @@
         line_home {
             bindings = <&mosk HOME LG(LEFT)>;
             key-positions = <6 7>; /* J + K (on layer 2) */
+            layers = <6>;
         };
 
         line_end {
             bindings = <&mosk END LG(RIGHT)>;
             key-positions = <8 9>; /* L + - (on layer 2) */
+            layers = <6>;
         };
 
         doc_home {
             bindings = <&mosk LC(HOME) LG(UP)>;
             key-positions = <6 9>; /* J + L (on layer 2) */
+            layers = <6>;
         };
 
         doc_end {
             bindings = <&mosk LC(END) LG(DOWN)>;
             key-positions = <17 19>; /* K + - (on layer 2) */
+            layers = <6>;
         };
 
         Win_LS {
