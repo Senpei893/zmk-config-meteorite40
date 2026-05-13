@@ -252,6 +252,20 @@
 
             tapping-term-ms = <180>;
         };
+
+        td_kpast: td_kpast {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_KPAST";
+            #binding-cells = <0>;
+            bindings = <&kp KP_MULTIPLY>, <&kp SEMI>;
+        };
+
+        td_kpplus: td_kpplus {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_KPPLUS";
+            #binding-cells = <0>;
+            bindings = <&kp KP_PLUS>, <&kp SINGLE_QUOTE>;
+        };
     };
 
     combos {
@@ -383,10 +397,10 @@
         layer_2 {
             display-name = "Symbols / Numbers";
             bindings = <
-&none   &td_qt  &td_lb  &td_rb  &kp SEMI          &kp KP_ASTERISK  &mm_kp7  &kp N8        &kp N9   &mm_kpsls
-&trans  &trans  &trans  &trans  &kp SINGLE_QUOTE  &kp KP_PLUS      &kp N4   &kp N5        &mm_kp6  &td_kpmns
-&none   &none   &none   &none   &kp BACKSLASH     &trans           &trans   &kp KP_EQUAL  &kp N1   &mm_kp2    &kp N3  &kp ENTER
-&trans  &trans  &trans  &trans  &mm_kpcmm         &kp NUMBER_0     &kp TAB  &mm_kpprd
+&none   &td_qt  &td_lb  &td_rb  &kp SEMI          &td_kpast     &kp NUMBER_7  &kp N8        &kp N9        &mm_kpsls
+&trans  &trans  &trans  &trans  &kp SINGLE_QUOTE  &td_kpplus    &kp N4        &kp N5        &kp NUMBER_6  &td_kpmns
+&none   &none   &none   &none   &kp BACKSLASH     &trans        &trans        &kp KP_EQUAL  &kp N1        &kp NUMBER_2  &kp N3  &kp ENTER
+&trans  &trans  &trans  &trans  &mm_kpcmm         &kp NUMBER_0  &kp TAB       &mm_kpprd
             >;
 
             sensor-bindings =
