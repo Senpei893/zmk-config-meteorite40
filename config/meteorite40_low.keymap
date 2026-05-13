@@ -283,26 +283,26 @@
 
         line_home {
             bindings = <&mosk HOME LG(LEFT)>;
-            key-positions = <6 7>; /* J + K (on layer 2) */
-            layers = <6>;
+            key-positions = <21 23>; /* J + K (on layer 2) */
+            layers = <0>;
         };
 
         line_end {
             bindings = <&mosk END LG(RIGHT)>;
-            key-positions = <8 9>; /* L + - (on layer 2) */
-            layers = <6>;
+            key-positions = <20 22>; /* L + - (on layer 2) */
+            layers = <0>;
         };
 
         doc_home {
             bindings = <&mosk LC(HOME) LG(UP)>;
-            key-positions = <6 9>; /* J + L (on layer 2) */
-            layers = <6>;
+            key-positions = <20 21>; /* J + L (on layer 2) */
+            layers = <0>;
         };
 
         doc_end {
             bindings = <&mosk LC(END) LG(DOWN)>;
-            key-positions = <17 19>; /* K + - (on layer 2) */
-            layers = <6>;
+            key-positions = <22 23>; /* K + - (on layer 2) */
+            layers = <0>;
         };
 
         Win_LS {
