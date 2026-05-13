@@ -185,7 +185,7 @@
         mm_kp6: mm_kp6 {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_KP6";
-            bindings = <&kp NUMBER_6>, <&kp LS(EQUAL)>;
+            bindings = <&kp NUMBER_6>, <&kp EQUAL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -194,7 +194,7 @@
         mm_kp2: mm_kp2 {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_KP2";
-            bindings = <&kp NUMBER_2>, <&kp LS(LEFT_BRACKET)>;
+            bindings = <&kp NUMBER_2>, <&kp LEFT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -275,7 +275,7 @@
             layers = <0 1>;
         };
 
-        tab {
+        graveandtilde {
             bindings = <&kp GRAVE>;
             key-positions = <1 2>; /* Q + W */
             layers = <1>;
@@ -284,45 +284,81 @@
         line_home {
             bindings = <&mosk HOME LG(LEFT)>;
             key-positions = <6 7>; /* J + K (on layer 2) */
-            layers = <0>;
         };
 
         line_end {
             bindings = <&mosk END LG(RIGHT)>;
             key-positions = <8 9>; /* L + - (on layer 2) */
-            layers = <0>;
         };
 
         doc_home {
             bindings = <&mosk LC(HOME) LG(UP)>;
             key-positions = <6 9>; /* J + L (on layer 2) */
-            layers = <0>;
         };
 
         doc_end {
             bindings = <&mosk LC(END) LG(DOWN)>;
             key-positions = <17 19>; /* K + - (on layer 2) */
-            layers = <0>;
         };
 
         Win_LS {
             bindings = <&kp HOME>;
             key-positions = <6 7>;
+            layers = <1>;
         };
 
         Win_LE {
             bindings = <&kp END>;
             key-positions = <8 9>;
+            layers = <1>;
         };
 
         Win_DH {
             bindings = <&kp LC(HOME)>;
             key-positions = <6 9>;
+            layers = <1>;
         };
 
         Win_DE {
             bindings = <&kp LC(END)>;
             key-positions = <7 8>;
+            layers = <1>;
+        };
+
+        macOS-LS {
+            bindings = <&kp LG(LEFT_ARROW)>;
+            key-positions = <6 6 7>;
+            layers = <0>;
+        };
+
+        MacOS-LE {
+            bindings = <&kp LG(RIGHT_ARROW)>;
+            key-positions = <8 9>;
+            layers = <0>;
+        };
+
+        macOS-DH {
+            bindings = <&kp LG(UP_ARROW)>;
+            key-positions = <6 9>;
+            layers = <0>;
+        };
+
+        MacOS-DE {
+            bindings = <&kp LG(DOWN_ARROW)>;
+            key-positions = <8 7>;
+            layers = <0>;
+        };
+
+        WinMHEN {
+            bindings = <&kp INT_MUHENKAN>;
+            key-positions = <1 3>;
+            layers = <1>;
+        };
+
+        Win-HENK {
+            bindings = <&kp INT_HENKAN>;
+            key-positions = <1 4>;
+            layers = <1>;
         };
     };
 
