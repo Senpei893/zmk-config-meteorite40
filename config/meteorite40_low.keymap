@@ -176,10 +176,11 @@
         mm_kp7: mm_kp7 {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_KP7";
-            bindings = <&kp NUMBER_7>, <&kp LS(NUMBER_6)>;
+            bindings = <&kp NUMBER_7>, <&kp NUMBER_6>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
 
         mm_kp6: mm_kp6 {
@@ -241,7 +242,7 @@
             label = "TD_QT";
             #binding-cells = <0>;
             tapping-term-ms = <180>;
-            bindings = <&mm_qt>, <&kp LS(NUMBER_7)>;
+            bindings = <&mm_qt>, <&kp LS(NUMBER_2)>;
         };
 
         td_mb3mac: td_mb3mac {
@@ -358,6 +359,12 @@
         macOS-DH {
             bindings = <&kp LG(UP_ARROW)>;
             key-positions = <6 9>;
+            layers = <0>;
+        };
+
+        MacOS-DE {
+            bindings = <&kp LG(DOWN_ARROW)>;
+            key-positions = <7>;
             layers = <0>;
         };
     };
