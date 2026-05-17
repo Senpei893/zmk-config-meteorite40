@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 
-#define DEFAULT_CPI 800         // トラックボールの感度
+#define DEFAULT_CPI 1000         // トラックボールの感度
 #define ROTATION_ANGLE 20       // トラックボールのY軸を回転
 #define CLIPPER_THRESHOLD 20    // スクロール時に斜めの値をクリップ
 
@@ -12,8 +12,8 @@
 #define INVERT_X 1              // X軸のスクロールの反転
 #define INVERT_Y 0              // Y軸のスクロールの反転
 
-#define SCALING_MODE 1          // 0: 無効, 1: 有効
-#define SCROLL_SCALING_MODE 1   // 0: 無効, 1: 有効
+#define SCALING_MODE 0          // 0: 無効, 1: 有効
+#define SCROLL_SCALING_MODE 0   // 0: 無効, 1: 有効
 #define OS_MODE_DEFAULT 0       // 0: Win, 1: Mac
 #define MAX_OUTPUT 300          // 出力の最大絶対値 |y|。既定 127
 #define HALF_INPUT 50           // r=|x|/xs の xs（counts）。既定 50
