@@ -247,20 +247,36 @@
             bindings = <&kp KP_DOT>, <&kp KP_COMMA>;
         };
 
-        mm_semicolon: mm_semicolon {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_SEMICOLON";
-            bindings = <&kp SEMICOLON>, <&kp SINGLE_QUOTE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
         td_semicolon: td_semicolon {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SEMICOLON";
             #binding-cells = <0>;
-            bindings = <&mm_semicolon>, <&kp LEFT_BRACKET>;
+            bindings = <&kp SEMICOLON>, <&kp SINGLE_QUOTE>;
+
+            tapping-term-ms = <180>;
+        };
+
+        td_macq: td_macq {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_MACQ";
+            #binding-cells = <0>;
+            bindings = <&mt CAPSLOCK Q>, <&kp LEFT_BRACKET>;
+        };
+
+        td_winq: td_winq {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_WINQ";
+            #binding-cells = <0>;
+            bindings = <&mt LS(CAPSLOCK) Q>, <&kp LEFT_BRACKET>;
+
+            tapping-term-ms = <180>;
+        };
+
+        td_slash: td_slash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SLASH";
+            #binding-cells = <0>;
+            bindings = <&mt RIGHT_ALT SLASH>, <&kp INTERNATIONAL_3>;
         };
     };
 
@@ -323,9 +339,9 @@
         win_default_layer {
             display-name = "MacOS";
             bindings = <
-&mt CAPS Q               &kp W           &kp E             &kp R               &kp T      &kp Y                  &kp U               &kp I           &kp O               &kp P
+&td_macq                 &kp W           &kp E             &kp R               &kp T      &kp Y                  &kp U               &kp I           &kp O               &kp P
 &lt 2 A                  &mt LEFT_GUI S  &mt LEFT_ALT D    &mt LEFT_CONTROL F  &kp G      &kp H                  &mt LEFT_CONTROL J  &mt LEFT_ALT K  &mt LEFT_COMMAND L  &td_mns
-&mt RIGHT_ALT Z          &kp X           &kp C             &kp V               &kp B      &td_lb                 &td_rb              &kp N           &kp M               &kp COMMA  &kp DOT  &mt RIGHT_ALT SLASH
+&mt RIGHT_ALT Z          &kp X           &kp C             &kp V               &kp B      &td_lb                 &td_rb              &kp N           &kp M               &kp COMMA  &kp DOT  &td_slash
 &mt LG(LA(LWIN)) ESCAPE  &mm_bs          &mt LSHIFT SPACE  &td_semicolon       &td_quote  &mt RIGHT_SHIFT ENTER  &lt 6 TAB           &mo 4
             >;
 
@@ -337,9 +353,9 @@
         layer_1 {
             display-name = "Windows";
             bindings = <
-&mt LS(CAPSLOCK) Q         &kp W               &kp E             &kp R               &kp T      &kp Y                  &kp U               &kp I           &kp O               &kp P
+&td_winq                   &kp W               &kp E             &kp R               &kp T      &kp Y                  &kp U               &kp I           &kp O               &kp P
 &lt 2 A                    &mt LEFT_CONTROL S  &mt LEFT_ALT D    &mt LEFT_COMMAND F  &kp G      &kp H                  &mt LEFT_COMMAND J  &mt LEFT_ALT K  &mt LEFT_CONTROL L  &td_mns
-&kp Z                      &kp X               &kp C             &kp V               &kp B      &td_lb                 &td_rb              &kp N           &kp M               &kp COMMA  &kp DOT  &kp SLASH
+&kp Z                      &kp X               &kp C             &kp V               &kp B      &td_lb                 &td_rb              &kp N           &kp M               &kp COMMA  &kp DOT  &td_slash
 &mt LA(LC(DELETE)) ESCAPE  &mm_bs              &mt LSHIFT SPACE  &td_semicolon       &td_quote  &mt RIGHT_SHIFT ENTER  &lt 6 TAB           &mo 5
             >;
 
@@ -351,10 +367,10 @@
         layer_2 {
             display-name = "Symbols / Numbers";
             bindings = <
-&none   &td_quote  &td_lb  &td_rb  &kp SEMI          &td_kpast                 &kp NUMBER_7  &kp N8        &kp N9        &mm_kpsls
-&trans  &trans     &trans  &trans  &kp SINGLE_QUOTE  &td_kpplus                &kp N4        &kp N5        &kp NUMBER_6  &td_kpmns
-&none   &none      &none   &none   &kp BACKSLASH     &trans                    &trans        &kp KP_EQUAL  &kp N1        &kp NUMBER_2  &kp N3  &kp ENTER
-&trans  &trans     &trans  &trans  &trans            &mt RIGHT_SHIFT NUMBER_0  &kp TAB       &td_kpprdcmm
+&none   &kp LEFT_BRACKET  &kp EQUAL  &kp RIGHT_BRACKET  &kp BACKSLASH        &td_kpast                 &kp NUMBER_7  &kp N8        &kp N9        &mm_kpsls
+&trans  &trans            &trans     &trans             &kp INTERNATIONAL_3  &td_kpplus                &kp N4        &kp N5        &kp NUMBER_6  &td_kpmns
+&none   &none             &none      &kp LESS_THAN      &kp GREATER_THAN     &trans                    &trans        &kp KP_EQUAL  &kp N1        &kp NUMBER_2  &kp N3  &kp ENTER
+&trans  &trans            &trans     &trans             &trans               &mt RIGHT_SHIFT NUMBER_0  &kp TAB       &td_kpprdcmm
             >;
 
             sensor-bindings =
