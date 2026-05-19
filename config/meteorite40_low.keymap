@@ -141,7 +141,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LB";
             #binding-cells = <0>;
-            bindings = <&mm_lb>, <&kp LS(SEMI)>;
+            bindings = <&mm_lb>, <&kp SEMI>;
 
             tapping-term-ms = <180>;
         };
@@ -150,7 +150,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_RB";
             #binding-cells = <0>;
-            bindings = <&mm_rb>, <&kp LS(SINGLE_QUOTE)>;
+            bindings = <&mm_rb>, <&kp SINGLE_QUOTE>;
 
             tapping-term-ms = <180>;
         };
