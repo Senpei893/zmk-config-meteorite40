@@ -167,7 +167,7 @@
         mm_quote: mm_quote {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_QUOTE";
-            bindings = <&lt 6 LS(NUMBER_7)>, <&kp LS(LEFT_BRACKET)>;
+            bindings = <&mt RIGHT_ALT LS(NUMBER_7)>, <&kp LS(NUMBER_2)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -188,24 +188,6 @@
             #binding-cells = <0>;
             tapping-term-ms = <180>;
             bindings = <&mm_quote>, <&kp LS(NUMBER_2)>;
-        };
-
-        td_kpast: td_kpast {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_KPAST";
-            #binding-cells = <0>;
-            bindings = <&kp KP_MULTIPLY>, <&kp SEMI>;
-
-            tapping-term-ms = <180>;
-        };
-
-        td_kpplus: td_kpplus {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_KPPLUS";
-            #binding-cells = <0>;
-            bindings = <&kp KP_PLUS>, <&kp SINGLE_QUOTE>;
-
-            tapping-term-ms = <180>;
         };
 
         td_kpprdcmm: td_kpprdcmm {
@@ -315,13 +297,13 @@
         compatible = "zmk,keymap";
         layout = &LOW_PROFILE_TYPE_B;
 
-        win_default_layer {
+        default_layer {
             display-name = "MacOS";
             bindings = <
-&td_macq                 &kp W           &kp E             &kp R                    &kp T              &kp Y                  &kp U               &kp I           &kp O               &kp P
-&lt 2 A                  &mt LEFT_GUI S  &mt LEFT_ALT D    &mt LEFT_CONTROL F       &kp G              &kp H                  &mt LEFT_CONTROL J  &mt LEFT_ALT K  &mt LEFT_COMMAND L  &td_mns
-&mt RIGHT_ALT Z          &kp X           &kp C             &kp V                    &kp B              &td_lb                 &td_rb              &kp N           &kp M               &kp COMMA  &kp DOT  &td_slash
-&mt LG(LA(LWIN)) ESCAPE  &kp DELETE      &mt LSHIFT SPACE  &mt RIGHT_ALT BACKSPACE  &mt RIGHT_ALT TAB  &mt RIGHT_SHIFT ENTER  &td_quote           &mo 4
+&td_macq                 &kp W           &kp E             &kp R                    &kp T      &kp Y                  &kp U               &kp I           &kp O               &kp P
+&lt 2 A                  &mt LEFT_GUI S  &mt LEFT_ALT D    &mt LEFT_CONTROL F       &kp G      &kp H                  &mt LEFT_CONTROL J  &mt LEFT_ALT K  &mt LEFT_COMMAND L  &td_mns
+&mt RIGHT_ALT Z          &kp X           &kp C             &kp V                    &kp B      &td_lb                 &td_rb              &kp N           &kp M               &kp COMMA  &kp DOT  &td_slash
+&mt LG(LA(LWIN)) ESCAPE  &kp DELETE      &mt LSHIFT SPACE  &mt RIGHT_ALT BACKSPACE  &td_quote  &mt RIGHT_SHIFT ENTER  &lt 6 TAB           &mo 4
             >;
 
             sensor-bindings =
@@ -332,10 +314,10 @@
         layer_1 {
             display-name = "Windows";
             bindings = <
-&td_winq                   &kp W               &kp E             &kp R               &kp T    &kp Y                  &kp U               &kp I           &kp O               &kp P
-&lt 2 A                    &mt LEFT_CONTROL S  &mt LEFT_ALT D    &mt LEFT_COMMAND F  &kp G    &kp H                  &mt LEFT_COMMAND J  &mt LEFT_ALT K  &mt LEFT_CONTROL L  &td_mns
-&kp Z                      &kp X               &kp C             &kp V               &kp B    &td_lb                 &td_rb              &kp N           &kp M               &kp COMMA  &kp DOT  &td_slash
-&mt LA(LC(DELETE)) ESCAPE  &kp DELETE          &mt LSHIFT SPACE  &kp BACKSPACE       &kp TAB  &mt RIGHT_SHIFT ENTER  &td_quote           &mo 5
+&td_winq                   &kp W               &kp E             &kp R               &kp T      &kp Y                  &kp U               &kp I           &kp O               &kp P
+&lt 2 A                    &mt LEFT_CONTROL S  &mt LEFT_ALT D    &mt LEFT_COMMAND F  &kp G      &kp H                  &mt LEFT_COMMAND J  &mt LEFT_ALT K  &mt LEFT_CONTROL L  &td_mns
+&kp Z                      &kp X               &kp C             &kp V               &kp B      &td_lb                 &td_rb              &kp N           &kp M               &kp COMMA  &kp DOT  &td_slash
+&mt LA(LC(DELETE)) ESCAPE  &kp DELETE          &mt LSHIFT SPACE  &kp BACKSPACE       &td_quote  &mt RIGHT_SHIFT ENTER  &lt 6 TAB           &mo 5
             >;
 
             sensor-bindings =
@@ -346,10 +328,10 @@
         layer_2 {
             display-name = "Symbols / Numbers";
             bindings = <
-&none   &kp LEFT_BRACKET  &kp EQUAL  &kp RIGHT_BRACKET  &kp BACKSLASH        &kp KP_ASTERISK           &kp NUMBER_7      &kp N8        &kp N9        &kp KP_SLASH
-&trans  &trans            &trans     &trans             &kp INTERNATIONAL_3  &kp KP_PLUS               &kp N4            &kp N5        &kp NUMBER_6  &td_kpmns
-&none   &none             &none      &kp LESS_THAN      &kp GREATER_THAN     &kp SEMI                  &kp SINGLE_QUOTE  &kp KP_EQUAL  &kp N1        &kp NUMBER_2  &kp N3  &kp ENTER
-&trans  &trans            &trans     &trans             &alt_cmd_tab         &mt RIGHT_SHIFT NUMBER_0  &td_kpprdcmm      &trans
+&none   &kp LEFT_BRACKET  &kp EQUAL  &kp RIGHT_BRACKET  &kp BACKSLASH           &kp KP_ASTERISK           &kp NUMBER_7      &kp N8         &kp N9        &kp KP_SLASH
+&trans  &trans            &trans     &trans             &kp INTERNATIONAL_3     &kp KP_PLUS               &kp N4            &kp N5         &kp NUMBER_6  &td_kpmns
+&none   &none             &none      &kp LESS_THAN      &kp GREATER_THAN        &kp SEMI                  &kp SINGLE_QUOTE  &kp LS(MINUS)  &kp N1        &kp NUMBER_2  &kp N3  &kp ENTER
+&trans  &trans            &trans     &trans             &mt RIGHT_ALT KP_COMMA  &mt RIGHT_SHIFT NUMBER_0  &kp TAB           &trans
             >;
 
             sensor-bindings =
@@ -360,10 +342,10 @@
         layer_3 {
             display-name = "Functions / Arrowkeys";
             bindings = <
-&kp F1   &kp F2  &kp F3  &kp F4  &kp F5   &kp HOME         &kp PG_UP          &kp UP    &kp PG_DN          &none
-&kp F11  &trans  &trans  &trans  &kp F12  &kp END          &kp LEFT           &kp DOWN  &kp RIGHT_ARROW    &none
-&kp F6   &kp F7  &kp F8  &kp F9  &kp F10  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp F13   &kp K_APPLICATION  &kp LA(DOWN_ARROW)  &none  &none
-&trans   &trans  &trans  &trans  &trans   &trans           &trans             &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5   &kp HOME  &kp PG_UP  &kp UP    &kp PG_DN          &none
+&trans  &trans  &trans  &trans  &trans   &kp END   &kp LEFT   &kp DOWN  &kp RIGHT_ARROW    &none
+&kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11   &kp F12    &kp F13   &kp K_APPLICATION  &kp LA(DOWN_ARROW)  &none  &none
+&trans  &trans  &trans  &trans  &trans   &trans    &trans     &trans
             >;
 
             sensor-bindings =
@@ -384,9 +366,9 @@
 
         layer_5 {
             bindings = <
-&trans     &kp LC(W)  &trans     &kp LC(R)  &kp LC(T)      &mkp MB2    &mt LG(D) LG(TAB)  &mt LEFT_SHIFT ESCAPE  &trans  &trans
+&trans     &kp LC(W)  &kp LC(N)  &kp LC(R)  &kp LC(T)      &mkp MB2    &mt LG(D) LG(TAB)  &mt LEFT_SHIFT ESCAPE  &trans  &trans
 &trans     &trans     &trans     &trans     &kp LC(SEMI)   &trans      &trans             &trans                 &trans  &trans
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LG(V)  &kp LC(MINUS)  &mm_winmb4  &mm_winmb5         &trans                 &trans  &trans  &trans  &trans
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(MINUS)  &mm_winmb4  &mm_winmb5         &trans                 &trans  &trans  &trans  &trans
 &trans     &trans     &mo 3      &mkp MB1   &mkp MB3       &trans      &trans             &trans
             >;
 
