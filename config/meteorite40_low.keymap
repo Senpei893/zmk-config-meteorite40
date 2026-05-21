@@ -225,15 +225,6 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
-
-        mm_p: mm_p {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_P";
-            bindings = <&kp P>, <&kp LEFT_BRACKET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
     };
 
     combos {
@@ -295,7 +286,7 @@
         default_layer {
             display-name = "MacOS";
             bindings = <
-&mt CAPS Q               &kp W           &kp E             &kp R                 &kp T      &kp Y                  &kp U               &kp I           &kp O               &mm_p
+&mt CAPS Q               &kp W           &kp E             &kp R                 &kp T      &kp Y                  &kp U               &kp I           &kp O               &kp P
 &lt 2 A                  &mt LEFT_GUI S  &mt LEFT_ALT D    &mt LEFT_CONTROL F    &kp G      &kp H                  &mt LEFT_CONTROL J  &mt LEFT_ALT K  &mt LEFT_COMMAND L  &td_mns
 &mt RIGHT_ALT Z          &kp X           &kp C             &kp V                 &kp B      &td_lb                 &td_rb              &kp N           &kp M               &kp COMMA  &kp DOT  &mm_backslash
 &mt LG(LA(LWIN)) ESCAPE  &kp BACKSPACE   &mt LSHIFT SPACE  &mt RIGHT_ALT DELETE  &td_quote  &mt RIGHT_SHIFT ENTER  &lt 6 TAB           &mo 4
@@ -309,7 +300,7 @@
         layer_1 {
             display-name = "Windows";
             bindings = <
-&mt LS(CAPS) Q             &kp W               &kp E             &kp R               &kp T      &kp Y                  &kp U               &kp I           &kp O               &mm_p
+&mt LS(CAPS) Q             &kp W               &kp E             &kp R               &kp T      &kp Y                  &kp U               &kp I           &kp O               &kp P
 &lt 2 A                    &mt LEFT_CONTROL S  &mt LEFT_ALT D    &mt LEFT_COMMAND F  &kp G      &kp H                  &mt LEFT_COMMAND J  &mt LEFT_ALT K  &mt LEFT_CONTROL L  &td_mns
 &kp Z                      &kp X               &kp C             &kp V               &kp B      &td_lb                 &td_rb              &kp N           &kp M               &kp COMMA  &kp DOT  &td_slash
 &mt LA(LC(DELETE)) ESCAPE  &kp BACKSPACE       &mt LSHIFT SPACE  &kp DELETE          &td_quote  &mt RIGHT_SHIFT ENTER  &lt 6 TAB           &mo 5
