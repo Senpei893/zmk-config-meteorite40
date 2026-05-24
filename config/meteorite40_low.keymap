@@ -300,7 +300,7 @@
         layer_1 {
             display-name = "Windows";
             bindings = <
-&kp LS(CAPS)               &kp W               &kp E             &kp R               &kp T      &kp Y                  &kp U               &kp I           &kp O               &kp P
+&kp Q                      &kp W               &kp E             &kp R               &kp T      &kp Y                  &kp U               &kp I           &kp O               &kp P
 &lt 2 A                    &mt LEFT_CONTROL S  &mt LEFT_ALT D    &mt LEFT_COMMAND F  &kp G      &kp H                  &mt LEFT_COMMAND J  &mt LEFT_ALT K  &mt LEFT_CONTROL L  &td_mns
 &kp Z                      &kp X               &kp C             &kp V               &kp B      &td_lb                 &td_rb              &kp N           &kp M               &kp COMMA  &kp DOT  &td_slash
 &mt LA(LC(DELETE)) ESCAPE  &mm_RSBStoDel       &mt LSHIFT SPACE  &TD_Semicolon       &td_quote  &mt RIGHT_SHIFT ENTER  &lt 6 TAB           &mo 5
