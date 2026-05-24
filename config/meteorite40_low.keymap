@@ -211,7 +211,7 @@
         mm_Semicolon: mm_Semicolon {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_SEMICOLON";
-            bindings = <&mt RIGHT_ALT SEMICOLON>, <&kp SINGLE_QUOTE>;
+            bindings = <&mt RIGHT_ALT SEMICOLON>, <&kp LS(NUMBER_7)>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
