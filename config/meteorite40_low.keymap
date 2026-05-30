@@ -222,7 +222,7 @@
             label = "TD_MB3";
             #binding-cells = <0>;
             tapping-term-ms = <170>;
-            bindings = <&mb_kh LEFT_SHIFT MB3>, <&kp LC(D)>;
+            bindings = <&mb_kh LEFT_SHIFT MB3>, <&kp LC(LG(D))>;
         };
 
         mm_slash: mm_slash {
