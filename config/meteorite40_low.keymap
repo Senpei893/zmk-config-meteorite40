@@ -252,7 +252,7 @@
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <0 1>; /* Z + X */
+            key-positions = <1 0>; /* Z + X */
             layers = <0 1>;
         };
 
@@ -264,7 +264,7 @@
 
         line_home {
             bindings = <&mosk HOME LG(LEFT)>;
-            key-positions = <21 23>; /* J + K (on layer 2) */
+            key-positions = <22 21>; /* J + K (on layer 2) */
             layers = <0>;
         };
 
