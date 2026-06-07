@@ -14,7 +14,7 @@
 
 &mt {
     flavor = "balanced"; // change hold to tap
-    tapping-term-ms = <150>; // change 200 to 150
+    tapping-term-ms = <160>; // change 200 to 150
 };
 
 &lt {
@@ -294,10 +294,10 @@
         default_layer {
             display-name = "MacOS";
             bindings = <
-&kp Q                    &kp W           &kp E             &kp R               &kp T      &kp Y                  &kp U               &kp I           &kp O               &kp P
-&lt 2 A                  &mt LEFT_GUI S  &mt LEFT_ALT D    &mt LEFT_CONTROL F  &kp G      &kp H                  &mt LEFT_CONTROL J  &mt LEFT_ALT K  &mt LEFT_COMMAND L  &td_mns
-&mt RIGHT_ALT Z          &kp X           &kp C             &kp V               &kp B      &td_lb                 &td_rb              &kp N           &kp M               &kp COMMA  &kp DOT  &mm_slash
-&mt LG(LA(LWIN)) ESCAPE  &mm_RSBStoDel   &mt LSHIFT SPACE  &TD_Semicolon       &td_Colon  &mt RIGHT_SHIFT ENTER  &lt 6 TAB           &mo 4
+&kp Q                      &kp W           &kp E             &kp R               &kp T      &kp Y                  &kp U               &kp I           &kp O               &kp P
+&lt 2 A                    &mt LEFT_GUI S  &mt LEFT_ALT D    &mt LEFT_CONTROL F  &kp G      &kp H                  &mt LEFT_CONTROL J  &mt LEFT_ALT K  &mt LEFT_COMMAND L  &td_mns
+&mt RIGHT_ALT Z            &kp X           &kp C             &kp V               &kp B      &td_lb                 &td_rb              &kp N           &kp M               &kp COMMA  &kp DOT  &mm_slash
+&mt LG(LA(ESCAPE)) ESCAPE  &mm_RSBStoDel   &mt LSHIFT SPACE  &TD_Semicolon       &td_Colon  &mt RIGHT_SHIFT ENTER  &lt 6 TAB           &mo 4
             >;
 
             sensor-bindings =
@@ -322,10 +322,10 @@
         layer_2 {
             display-name = "Symbols / Numbers";
             bindings = <
-&none   &kp LEFT_BRACKET  &kp EQUAL  &kp SEMICOLON  &kp SINGLE_QUOTE     &kp KP_ASTERISK  &kp NUMBER_7  &kp N8         &kp N9        &kp KP_SLASH
-&trans  &trans            &trans     &trans         &kp INTERNATIONAL_3  &kp KP_PLUS      &kp N4        &kp N5         &kp NUMBER_6  &td_kpmns
-&none   &none             &none      &kp LESS_THAN  &kp GREATER_THAN     &trans           &trans        &kp LS(MINUS)  &kp N1        &kp NUMBER_2  &kp N3  &kp ENTER
-&trans  &trans            &trans     &trans         &kp KP_DOT           &kp NUMBER_0     &kp TAB       &kp KP_COMMA
+&none   &kp LEFT_BRACKET  &kp EQUAL  &kp RIGHT_BRACKET  &kp BACKSLASH        &kp KP_ASTERISK  &kp NUMBER_7      &kp N8         &kp N9        &kp KP_SLASH
+&trans  &trans            &trans     &trans             &kp INTERNATIONAL_3  &kp KP_PLUS      &kp N4            &kp N5         &kp NUMBER_6  &td_kpmns
+&none   &none             &none      &kp SEMI           &kp SINGLE_QUOTE     &kp LESS_THAN    &kp GREATER_THAN  &kp LS(MINUS)  &kp N1        &kp NUMBER_2  &kp N3  &kp ENTER
+&trans  &trans            &trans     &trans             &kp KP_DOT           &kp NUMBER_0     &kp TAB           &kp KP_COMMA
             >;
 
             sensor-bindings =
@@ -349,10 +349,10 @@
 
         layer_4 {
             bindings = <
-&kp LS(LG(L))  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)                      &mb_kh F13 MB2         &TD_MB3            &kp ESCAPE  &trans  &trans
-&trans         &trans     &trans     &trans     &kp LG(SEMI)                   &trans                 &trans             &trans      &trans  &trans
-&kp LG(Z)      &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(MINUS)                  &kp LG(RIGHT_BRACKET)  &kp LG(BACKSLASH)  &trans      &trans  &trans  &trans  &trans
-&trans         &trans     &mo 3      &mkp MB1   &mt RA(UP_ARROW) LC(UP_ARROW)  &trans                 &trans             &trans
+&kp LS(LG(L))  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)               &mb_kh F13 MB2  &TD_MB3       &mt LEFT_SHIFT ESCAPE  &trans  &trans
+&trans         &trans     &trans     &trans     &kp LG(RIGHT_BRACKET)   &trans          &trans        &trans                 &trans  &trans
+&kp LG(Z)      &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(BACKSLASH)       &kp LG(MINUS)   &kp LG(SEMI)  &trans                 &trans  &trans  &trans  &trans
+&trans         &trans     &mo 3      &mkp MB1   &mt RA(H) LC(UP_ARROW)  &trans          &trans        &trans
             >;
 
             label = "MacOSMB";
@@ -360,10 +360,10 @@
 
         layer_5 {
             bindings = <
-&trans     &kp LC(W)  &kp LC(N)  &kp LC(R)  &kp LC(T)          &mkp MB2    &mb_kh LEFT_SHIFT MB3  &kp ESCAPE  &trans  &trans
-&trans     &trans     &trans     &trans     &kp LC(SEMI)       &trans      &trans                 &trans      &trans  &trans
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(MINUS)      &mm_winmb4  &mm_winmb5             &trans      &trans  &trans  &trans  &trans
-&trans     &trans     &mo 3      &mkp MB1   &mt LG(D) LG(TAB)  &trans      &trans                 &trans
+&trans     &kp LC(W)  &kp LC(N)  &kp LC(R)  &kp LC(T)          &mkp MB2       &mb_kh LEFT_SHIFT MB3  &mt LEFT_SHIFT ESCAPE  &trans  &trans
+&trans     &trans     &trans     &trans     &mm_winmb4         &trans         &trans                 &trans                 &trans  &trans
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &mm_winmb5         &kp LC(MINUS)  &kp LC(SEMI)           &trans                 &trans  &trans  &trans  &trans
+&trans     &trans     &mo 3      &mkp MB1   &mt LG(D) LG(TAB)  &trans         &trans                 &trans
             >;
 
             label = "WindowsMB";
