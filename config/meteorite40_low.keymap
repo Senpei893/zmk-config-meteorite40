@@ -14,7 +14,7 @@
 
 &mt {
     flavor = "balanced"; // change hold to tap
-    tapping-term-ms = <160>; // change 200 to 150
+    tapping-term-ms = <150>; // change 200 to 150
 };
 
 &lt {
@@ -349,10 +349,10 @@
 
         layer_4 {
             bindings = <
-&kp LS(LG(L))  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)               &mb_kh F13 MB2  &TD_MB3       &mt LEFT_SHIFT ESCAPE  &trans  &trans
-&trans         &trans     &trans     &trans     &kp LG(RIGHT_BRACKET)   &trans          &trans        &trans                 &trans  &trans
-&kp LG(Z)      &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(BACKSLASH)       &kp LG(MINUS)   &kp LG(SEMI)  &trans                 &trans  &trans  &trans  &trans
-&trans         &trans     &mo 3      &mkp MB1   &mt RA(H) LC(UP_ARROW)  &trans          &trans        &trans
+&kp LS(LG(L))  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)               &mb_kh F13 MB2  &mb_kh LEFT_SHIFT MB3  &mt LEFT_SHIFT ESCAPE  &trans  &trans
+&kp LG(A)      &trans     &trans     &trans     &kp LG(RIGHT_BRACKET)   &trans          &trans                 &trans                 &trans  &trans
+&kp LG(Z)      &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(BACKSLASH)       &kp LG(MINUS)   &kp LG(SEMI)           &trans                 &trans  &trans  &trans  &trans
+&trans         &trans     &mo 3      &mkp MB1   &mt RA(H) LC(UP_ARROW)  &trans          &trans                 &trans
             >;
 
             label = "MacOSMB";
@@ -361,7 +361,7 @@
         layer_5 {
             bindings = <
 &trans     &kp LC(W)  &kp LC(N)  &kp LC(R)  &kp LC(T)          &mkp MB2       &mb_kh LEFT_SHIFT MB3  &mt LEFT_SHIFT ESCAPE  &trans  &trans
-&trans     &trans     &trans     &trans     &mm_winmb4         &trans         &trans                 &trans                 &trans  &trans
+&kp LC(A)  &trans     &trans     &trans     &mm_winmb4         &trans         &trans                 &trans                 &trans  &trans
 &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &mm_winmb5         &kp LC(MINUS)  &kp LC(SEMI)           &trans                 &trans  &trans  &trans  &trans
 &trans     &trans     &mo 3      &mkp MB1   &mt LG(D) LG(TAB)  &trans         &trans                 &trans
             >;
