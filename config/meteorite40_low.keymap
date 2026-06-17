@@ -373,10 +373,10 @@
 
         layer_4 {
             bindings = <
-&kp LS(LG(L))  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)               &mb_kh F13 MB2             &mb_kh LEFT_SHIFT MB3  &mo 3   &trans  &trans
-&kp LG(A)      &trans     &trans     &trans     &kp LG(RIGHT_BRACKET)   &kp LG(MINUS)              &kp LG(SEMI)           &trans  &trans  &trans
-&kp LG(Z)      &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(BACKSLASH)       &kp LG(LS(RIGHT_BRACKET))  &kp LG(LS(BACKSLASH))  &trans  &trans  &trans  &trans  &trans
-&trans         &trans     &mkp MB1   &trans     &mt RA(H) LC(UP_ARROW)  &trans                     &trans                 &trans
+&kp LS(LG(L))  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)               &mb_kh F13 MB2             &mb_kh LEFT_SHIFT MB3  &kp ESCAPE  &trans  &trans
+&kp LG(A)      &trans     &trans     &trans     &kp LG(RIGHT_BRACKET)   &kp LG(MINUS)              &kp LG(SEMI)           &trans      &trans  &trans
+&kp LG(Z)      &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(BACKSLASH)       &kp LG(LS(RIGHT_BRACKET))  &kp LG(LS(BACKSLASH))  &trans      &trans  &trans  &trans  &trans
+&trans         &trans     &mo 3      &mkp MB1   &mt RA(H) LC(UP_ARROW)  &trans                     &trans                 &trans
             >;
 
             label = "MacOSMB";
@@ -384,10 +384,10 @@
 
         layer_5 {
             bindings = <
-&trans     &kp LC(W)  &kp LC(N)  &kp LC(R)  &kp LC(T)          &mkp MB2         &mb_kh LEFT_SHIFT MB3  &mo 3   &trans  &trans
-&kp LC(A)  &trans     &trans     &trans     &mm_winmb4         &kp LC(MINUS)    &kp LC(SEMI)           &trans  &trans  &trans
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &mm_winmb5         &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)      &trans  &trans  &trans  &trans  &trans
-&trans     &trans     &mkp MB1   &trans     &mt LG(D) LG(TAB)  &trans           &trans                 &trans
+&trans     &kp LC(W)  &kp LC(N)  &kp LC(R)  &kp LC(T)          &mkp MB2         &mb_kh LEFT_SHIFT MB3  &kp ESCAPE  &trans  &trans
+&kp LC(A)  &trans     &trans     &trans     &mm_winmb4         &kp LC(MINUS)    &kp LC(SEMI)           &trans      &trans  &trans
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &mm_winmb5         &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)      &trans      &trans  &trans  &trans  &trans
+&trans     &trans     &mo 3      &mkp MB1   &mt LG(D) LG(TAB)  &trans           &trans                 &trans
             >;
 
             label = "WindowsMB";
