@@ -318,10 +318,10 @@
         default_layer {
             display-name = "MacOS";
             bindings = <
-&kp Q                      &kp W           &kp E             &kp R               &kp T                   &kp Y                  &mm_u               &mm_i           &mm_o               &kp P
-&lt 2 A                    &mt LEFT_GUI S  &mt LEFT_ALT D    &mt LEFT_CONTROL F  &kp G                   &kp H                  &mt LEFT_CONTROL J  &mt LEFT_ALT K  &mt LEFT_COMMAND L  &td_mns
-&kp Z                      &kp X           &kp C             &kp V               &kp B                   &td_lb                 &td_rb              &kp N           &kp M               &mm_comma  &mm_period  &mm_slash
-&mt LG(LA(ESCAPE)) ESCAPE  &kp BACKSPACE   &mt LSHIFT SPACE  &kp DELETE          &mt RIGHT_ALT INT_KANA  &mt RIGHT_SHIFT ENTER  &lt 6 TAB           &mo 4
+&kp Q                      &kp W           &kp E             &kp R               &kp T                     &kp Y                  &mm_u               &mm_i           &mm_o               &kp P
+&lt 2 A                    &mt LEFT_GUI S  &mt LEFT_ALT D    &mt LEFT_CONTROL F  &kp G                     &kp H                  &mt LEFT_CONTROL J  &mt LEFT_ALT K  &mt LEFT_COMMAND L  &td_mns
+&kp Z                      &kp X           &kp C             &kp V               &kp B                     &td_lb                 &td_rb              &kp N           &kp M               &mm_comma  &mm_period  &mm_slash
+&mt LG(LA(ESCAPE)) ESCAPE  &kp BACKSPACE   &mt LSHIFT SPACE  &kp DELETE          &mt RIGHT_ALT LANGUAGE_1  &mt RIGHT_SHIFT ENTER  &lt 6 TAB           &mo 4
             >;
 
             sensor-bindings =
