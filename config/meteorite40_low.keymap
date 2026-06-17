@@ -151,10 +151,11 @@
         mm_kpmns: mm_kpmns {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_KPMNS";
-            bindings = <&kp KP_MINUS>, <&kp LS(INTERNATIONAL_1)>;
+            bindings = <&kp KP_MINUS>, <&kp INTERNATIONAL_1>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
 
         td_kpmns: td_kpmns {
