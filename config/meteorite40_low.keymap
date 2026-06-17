@@ -179,10 +179,11 @@
         mm_slash: mm_slash {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_SLASH";
-            bindings = <&td_slash>, <&kp LS(INTERNATIONAL_3)>;
+            bindings = <&td_slash>, <&kp INTERNATIONAL_3>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
         };
 
         td_comma: td_comma {
