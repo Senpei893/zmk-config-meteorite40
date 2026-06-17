@@ -134,7 +134,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LB";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_BRACKET>, <&kp LS(NUMBER_8)>;
+            bindings = <&kp RIGHT_BRACKET>, <&kp SEMICOLON>;
 
             tapping-term-ms = <170>;
         };
@@ -143,7 +143,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_RB";
             #binding-cells = <0>;
-            bindings = <&kp BACKSLASH>, <&kp LS(NUMBER_9)>;
+            bindings = <&kp BACKSLASH>, <&kp SINGLE_QUOTE>;
 
             tapping-term-ms = <170>;
         };
@@ -166,14 +166,6 @@
             tapping-term-ms = <180>;
         };
 
-        TD_Quote: TD_Quote {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_QUOTE";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&MM_Quote>, <&lt 6 LS(NUMBER_2)>;
-        };
-
         td_slash: td_slash {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SLASH";
@@ -181,32 +173,6 @@
             bindings = <&kp SLASH>, <&kp INTERNATIONAL_3>;
 
             tapping-term-ms = <180>;
-        };
-
-        mm_RSBStoDel: mm_RSBStoDel {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_RSBSTODEL";
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        TD_Semicolon: TD_Semicolon {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_SEMICOLON";
-            #binding-cells = <0>;
-            bindings = <&kp SEMICOLON>, <&kp SINGLE_QUOTE>;
-
-            tapping-term-ms = <200>;
-        };
-
-        TD_MB3: TD_MB3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_MB3";
-            #binding-cells = <0>;
-            tapping-term-ms = <170>;
-            bindings = <&mb_kh LEFT_SHIFT MB3>, <&kp LC(LG(D))>;
         };
 
         mm_slash: mm_slash {
@@ -218,13 +184,72 @@
             mods = <(MOD_RSFT)>;
         };
 
-        MM_Quote: MM_Quote {
+        td_comma: td_comma {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_COMMA";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp LEFT_BRACKET>;
+
+            tapping-term-ms = <170>;
+        };
+
+        mm_comma: mm_comma {
             compatible = "zmk,behavior-mod-morph";
-            label = "MM_QUOTE";
-            bindings = <&kp LS(NUMBER_7)>, <&kp LS(LEFT_BRACKET)>;
+            label = "MM_COMMA";
+            bindings = <&td_comma>, <&kp NUMBER_8>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+
+        td_period: td_period {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_PERIOD";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp EQUAL>;
+
+            tapping-term-ms = <170>;
+        };
+
+        mm_period: mm_period {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_PERIOD";
+            bindings = <&td_period>, <&kp NUMBER_9>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+
+        mm_u: mm_u {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_U";
+            bindings = <&kp U>, <&kp NUMBER_7>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+
+        mm_i: mm_i {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_I";
+            bindings = <&kp I>, <&kp NUMBER_2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+
+        mm_o: mm_o {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_O";
+            bindings = <&kp O>, <&kp LEFT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
         };
     };
 
@@ -278,6 +303,12 @@
             key-positions = <22 23>; /* K + - (on layer 2) */
             layers = <0>;
         };
+
+        MouseLayerESC {
+            bindings = <&kp ESCAPE>;
+            key-positions = <6 7>;
+            layers = <4 5>;
+        };
     };
 
     keymap {
@@ -287,9 +318,9 @@
         default_layer {
             display-name = "MacOS";
             bindings = <
-&kp Q                      &kp W           &kp E             &kp R               &kp T                   &kp Y                  &kp U               &kp I           &kp O               &kp P
+&kp Q                      &kp W           &kp E             &kp R               &kp T                   &kp Y                  &mm_u               &mm_i           &mm_o               &kp P
 &lt 2 A                    &mt LEFT_GUI S  &mt LEFT_ALT D    &mt LEFT_CONTROL F  &kp G                   &kp H                  &mt LEFT_CONTROL J  &mt LEFT_ALT K  &mt LEFT_COMMAND L  &td_mns
-&mt RIGHT_ALT Z            &kp X           &kp C             &kp V               &kp B                   &td_lb                 &td_rb              &kp N           &kp M               &kp COMMA  &kp DOT  &mm_slash
+&kp Z                      &kp X           &kp C             &kp V               &kp B                   &td_lb                 &td_rb              &kp N           &kp M               &mm_comma  &mm_period  &mm_slash
 &mt LG(LA(ESCAPE)) ESCAPE  &kp BACKSPACE   &mt LSHIFT SPACE  &kp DELETE          &mt RIGHT_ALT INT_KANA  &mt RIGHT_SHIFT ENTER  &lt 6 TAB           &mo 4
             >;
 
@@ -301,10 +332,10 @@
         layer_1 {
             display-name = "Windows";
             bindings = <
-&kp Q                      &kp W               &kp E             &kp R               &kp T      &kp Y                  &kp U               &kp I           &kp O               &kp P
-&lt 2 A                    &mt LEFT_CONTROL S  &mt LEFT_ALT D    &mt LEFT_COMMAND F  &kp G      &kp H                  &mt LEFT_COMMAND J  &mt LEFT_ALT K  &mt LEFT_CONTROL L  &td_mns
-&kp Z                      &kp X               &kp C             &kp V               &kp B      &td_lb                 &td_rb              &kp N           &kp M               &kp COMMA  &kp DOT  &mm_slash
-&mt LA(LC(DELETE)) ESCAPE  &mm_RSBStoDel       &mt LSHIFT SPACE  &kp DELETE          &kp GRAVE  &mt RIGHT_SHIFT ENTER  &lt 6 TAB           &mo 5
+&kp Q                      &kp W               &kp E             &kp R       &kp T                &kp Y                  &mm_u      &mm_i           &mm_o               &kp P
+&lt 2 A                    &mt LEFT_CONTROL S  &mt LEFT_ALT D    &kp F       &kp G                &kp H                  &kt J      &mt LEFT_ALT K  &mt LEFT_CONTROL L  &td_mns
+&kp Z                      &kp X               &kp C             &kp V       &kp B                &td_lb                 &td_rb     &kp N           &kp M               &mm_comma  &mm_period  &mm_slash
+&mt LA(LC(DELETE)) ESCAPE  &kp BACKSPACE       &mt LSHIFT SPACE  &kp DELETE  &mt RIGHT_WIN GRAVE  &mt RIGHT_SHIFT ENTER  &lt 6 TAB  &mo 5
             >;
 
             sensor-bindings =
@@ -315,10 +346,10 @@
         layer_2 {
             display-name = "Symbols / Numbers";
             bindings = <
-&none   &kp LEFT_BRACKET  &kp EQUAL  &kp RIGHT_BRACKET  &kp BACKSLASH        &kp KP_ASTERISK  &kp NUMBER_7      &kp N8         &kp N9        &kp KP_SLASH
-&trans  &trans            &trans     &trans             &kp INTERNATIONAL_3  &kp KP_PLUS      &kp N4            &kp N5         &kp NUMBER_6  &td_kpmns
-&none   &none             &none      &kp SEMI           &kp SINGLE_QUOTE     &kp LESS_THAN    &kp GREATER_THAN  &kp LS(MINUS)  &kp N1        &kp NUMBER_2  &kp N3  &kp ENTER
-&trans  &trans            &trans     &trans             &kp TAB              &kp NUMBER_0     &kp PERIOD        &kp COMMA
+&none   &kp LEFT_BRACKET  &kp EQUAL  &kp RIGHT_BRACKET  &kp BACKSLASH        &kp KP_ASTERISK  &kp NUMBER_7  &kp N8         &kp N9        &kp KP_SLASH
+&trans  &trans            &trans     &trans             &kp INTERNATIONAL_3  &kp KP_PLUS      &kp N4        &kp N5         &kp NUMBER_6  &td_kpmns
+&none   &none             &none      &kp SEMI           &kp SINGLE_QUOTE     &trans           &trans        &kp LS(MINUS)  &kp N1        &kp NUMBER_2  &kp N3  &kp ENTER
+&trans  &trans            &trans     &trans             &kp COMMA            &kp NUMBER_0     &kp TAB       &kp PERIOD
             >;
 
             sensor-bindings =
@@ -342,10 +373,10 @@
 
         layer_4 {
             bindings = <
-&kp LS(LG(L))  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)               &mb_kh F13 MB2  &mb_kh LEFT_SHIFT MB3  &mt LEFT_SHIFT ESCAPE  &trans  &trans
-&kp LG(A)      &trans     &trans     &trans     &kp LG(RIGHT_BRACKET)   &trans          &trans                 &trans                 &trans  &trans
-&kp LG(Z)      &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(BACKSLASH)       &kp LG(MINUS)   &kp LG(SEMI)           &trans                 &trans  &trans  &trans  &trans
-&trans         &trans     &mo 3      &mkp MB1   &mt RA(H) LC(UP_ARROW)  &trans          &trans                 &trans
+&kp LS(LG(L))  &kp LG(W)  &kp LG(N)  &kp LG(R)  &kp LG(T)               &mb_kh F13 MB2             &mb_kh LEFT_SHIFT MB3  &mo 3   &trans  &trans
+&kp LG(A)      &trans     &trans     &trans     &kp LG(RIGHT_BRACKET)   &kp LG(MINUS)              &kp LG(SEMI)           &trans  &trans  &trans
+&kp LG(Z)      &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(BACKSLASH)       &kp LG(LS(RIGHT_BRACKET))  &kp LG(LS(BACKSLASH))  &trans  &trans  &trans  &trans  &trans
+&trans         &trans     &mkp MB1   &trans     &mt RA(H) LC(UP_ARROW)  &trans                     &trans                 &trans
             >;
 
             label = "MacOSMB";
@@ -353,10 +384,10 @@
 
         layer_5 {
             bindings = <
-&trans     &kp LC(W)  &kp LC(N)  &kp LC(R)  &kp LC(T)          &mkp MB2       &mb_kh LEFT_SHIFT MB3  &mt LEFT_SHIFT ESCAPE  &trans  &trans
-&kp LC(A)  &trans     &trans     &trans     &mm_winmb4         &trans         &trans                 &trans                 &trans  &trans
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &mm_winmb5         &kp LC(MINUS)  &kp LC(SEMI)           &trans                 &trans  &trans  &trans  &trans
-&trans     &trans     &mo 3      &mkp MB1   &mt LG(D) LG(TAB)  &trans         &trans                 &trans
+&trans     &kp LC(W)  &kp LC(N)  &kp LC(R)  &kp LC(T)          &mkp MB2         &mb_kh LEFT_SHIFT MB3  &mo 3   &trans  &trans
+&kp LC(A)  &trans     &trans     &trans     &mm_winmb4         &kp LC(MINUS)    &kp LC(SEMI)           &trans  &trans  &trans
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &mm_winmb5         &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)      &trans  &trans  &trans  &trans  &trans
+&trans     &trans     &mkp MB1   &trans     &mt LG(D) LG(TAB)  &trans           &trans                 &trans
             >;
 
             label = "WindowsMB";
