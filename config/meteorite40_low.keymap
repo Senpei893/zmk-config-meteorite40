@@ -13,7 +13,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &mt {
-    flavor = "balanced"; // change hold to tap
+    flavor = "hold-preferred"; // change hold to tap
     tapping-term-ms = <170>; // change 200 to 150
     require-prior-idle-ms = <150>;
 };
