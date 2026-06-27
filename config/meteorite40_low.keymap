@@ -14,14 +14,12 @@
 
 &mt {
     flavor = "hold-preferred"; // change hold to tap
-    tapping-term-ms = <185>; // change 200 to 150
-    require-prior-idle-ms = <150>;
+    tapping-term-ms = <175>; // change 200 to 150
 };
 
 &lt {
     flavor = "hold-preferred";
-    tapping-term-ms = <185>; // change 200 to 150 // change 200 to 150
-    require-prior-idle-ms = <150>;
+    tapping-term-ms = <175>; // change 200 to 150 // change 200 to 150
 };
 
 / {
@@ -30,7 +28,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <185>;
+            tapping-term-ms = <175>;
             bindings = <&mck>, <&kp>;
 
             display-name = "meteorite OS-Switch-mod-tap";
@@ -40,7 +38,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <185>;
+            tapping-term-ms = <175>;
             bindings = <&mck>, <&alt_cmd_tab>;
 
             display-name = "meteorite OS-Switch-mod-tap (smart toggle)";
