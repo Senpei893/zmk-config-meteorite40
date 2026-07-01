@@ -13,12 +13,12 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &mt {
-    flavor = "hold-preferred"; // change hold to tap
-    tapping-term-ms = <175>; // change 200 to 150
+    flavor = "balanced"; // change hold to tap
+    tapping-term-ms = <180>; // change 200 to 150
 };
 
 &lt {
-    flavor = "hold-preferred";
+    flavor = "balanced";
     tapping-term-ms = <175>; // change 200 to 150 // change 200 to 150
 };
 
@@ -27,8 +27,8 @@
         mck_mt: mck_mt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <175>;
+            flavor = "balanced";
+            tapping-term-ms = <180>;
             bindings = <&mck>, <&kp>;
 
             display-name = "meteorite OS-Switch-mod-tap";
@@ -37,8 +37,8 @@
         mck_mt_st: mck_mt_st {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <175>;
+            flavor = "balanced";
+            tapping-term-ms = <180>;
             bindings = <&mck>, <&alt_cmd_tab>;
 
             display-name = "meteorite OS-Switch-mod-tap (smart toggle)";
